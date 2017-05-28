@@ -5,8 +5,10 @@
  */
 package com.leaf.cashier.Utility;
 
+import java.io.FileInputStream;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Properties;
 import org.hibernate.SessionFactory;
 import org.hibernate.boot.Metadata;
 import org.hibernate.boot.MetadataSources;
@@ -26,6 +28,8 @@ public class HaibernateUtil {
     public static SessionFactory getSessionFactory() {
         if (sessionFactory == null) {
             try {
+                Properties properties = new Properties();
+                properties.load(new FileInputStream(CommonConstant.HIBERNATE_PROPERTIES_FILE_PATH));
                 StandardServiceRegistryBuilder registryBuilder = new StandardServiceRegistryBuilder();
 
                 Map<String, String> settings = new HashMap<>();
@@ -38,7 +42,7 @@ public class HaibernateUtil {
                 settings.put(Environment.FORMAT_SQL, "true");
                 settings.put(Environment.SHOW_SQL, "true");
 
-                registryBuilder.applySettings(settings);
+                registryBuilder.applySettings(properties);
                 registry = registryBuilder.build();
                 MetadataSources sources = new MetadataSources(registry);
                 Metadata metadata = sources.getMetadataBuilder().build();
