@@ -17,6 +17,7 @@
         <hibernate.version>5.2.10.Final</hibernate.version>
         <hibernate-validation.version>5.4.0.Final</hibernate-validation.version>
         <jackson.version>2.7.1</jackson.version>
+        <mysql.version>5.1.38</mysql.version>
     </properties>
     
     <dependencies>
@@ -66,9 +67,9 @@
         </dependency>
         
         <dependency>
-            <groupId>org.postgresql</groupId>
-            <artifactId>postgresql</artifactId>
-            <version>42.1.1</version>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>${mysql.version}</version>
         </dependency>
         
     </dependencies>

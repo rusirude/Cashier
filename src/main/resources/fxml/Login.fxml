@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.media.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="331.0" prefWidth="491.0" stylesheets="@../styles/Styles.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.leaf.cashier.LoginController">
+    <children>
+        <Label fx:id="label" layoutX="126" layoutY="120" minHeight="16" minWidth="69" />
+        <PasswordField fx:id="txtPassword" layoutX="304.0" layoutY="203.0" prefHeight="25.0" prefWidth="173.0" />
+        <TextField fx:id="txtUsername" layoutX="304.0" layoutY="153.0" prefHeight="25.0" prefWidth="173.0" />
+        <Label layoutX="304.0" layoutY="133.0" prefHeight="17.0" prefWidth="80.0" text="Username" />
+        <Label layoutX="304.0" layoutY="186.0" text="Password" />
+        <Button fx:id="btnLogin" layoutX="303.0" layoutY="253.0" mnemonicParsing="false" onAction="#btnLoginAction" text="Login" />
+        <Button fx:id="btnCancel" layoutX="365.0" layoutY="253.0" mnemonicParsing="false" text="Cancel" />
+        <ImageView disable="true" fitHeight="157.0" fitWidth="250.0" layoutX="36.0" layoutY="113.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../image/leafLogo.png" />
+            </image>
+        </ImageView>
+        <Label layoutX="302.0" layoutY="21.0" text="Login">
+            <font>
+                <Font size="67.0" />
+            </font>
+        </Label>
+    </children>
+</AnchorPane>

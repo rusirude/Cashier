@@ -34,11 +34,11 @@ public class HaibernateUtil {
                 StandardServiceRegistryBuilder registryBuilder = new StandardServiceRegistryBuilder();
 
                 Map<String, String> settings = new HashMap<>();
-                settings.put(Environment.DRIVER, "org.postgresql.Driver");
-                settings.put(Environment.URL, "jdbc:postgresql://127.0.0.1:5432/inventory");
-                settings.put(Environment.USER, "postgres");
-                settings.put(Environment.PASS, "0344921685");
-                settings.put(Environment.DIALECT, "org.hibernate.dialect.PostgreSQLDialect");
+                settings.put(Environment.DRIVER, "com.mysql.jdbc.Driver");
+                settings.put(Environment.URL, "jdbc:mysql://127.0.0.1:3306/cashier");
+                settings.put(Environment.USER, "root");
+                settings.put(Environment.PASS, "");
+                settings.put(Environment.DIALECT, "org.hibernate.dialect.MySQLDialect");
                 settings.put(Environment.POOL_SIZE, "1");
                 settings.put(Environment.FORMAT_SQL, "true");
                 settings.put(Environment.SHOW_SQL, "true");
