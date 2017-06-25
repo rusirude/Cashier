@@ -21,7 +21,7 @@ import org.hibernate.cfg.Environment;
  *
  * @author Rusiru
  */
-public class HaibernateUtil {
+public class HibernateUtil {
 
     private static StandardServiceRegistry registry;
     private static SessionFactory sessionFactory;
@@ -29,22 +29,24 @@ public class HaibernateUtil {
     public static SessionFactory getSessionFactory() {
         if (sessionFactory == null) {
             try {
-                Properties properties = new Properties();
-                properties.load(new FileInputStream(CommonConstant.HIBERNATE_PROPERTIES_FILE_PATH));
-                StandardServiceRegistryBuilder registryBuilder = new StandardServiceRegistryBuilder();
+               // Properties properties = new Properties();
+               // properties.load(new FileInputStream(CommonConstant.HIBERNATE_PROPERTIES_FILE_PATH));
+                registry = new StandardServiceRegistryBuilder()
+                        .configure("hibernate.cfg.xml")
+                        .build();
 
-                Map<String, String> settings = new HashMap<>();
-                settings.put(Environment.DRIVER, "com.mysql.jdbc.Driver");
-                settings.put(Environment.URL, "jdbc:mysql://127.0.0.1:3306/cashier");
-                settings.put(Environment.USER, "root");
-                settings.put(Environment.PASS, "");
-                settings.put(Environment.DIALECT, "org.hibernate.dialect.MySQLDialect");
-                settings.put(Environment.POOL_SIZE, "1");
-                settings.put(Environment.FORMAT_SQL, "true");
-                settings.put(Environment.SHOW_SQL, "true");
-
-                registryBuilder.applySettings(properties);
-                registry = registryBuilder.build();
+//                Map<String, String> settings = new HashMap<>();
+//                settings.put(Environment.DRIVER, "com.mysql.jdbc.Driver");
+//                settings.put(Environment.URL, "jdbc:mysql://127.0.0.1:3306/cashier");
+//                settings.put(Environment.USER, "root");
+//                settings.put(Environment.PASS, "");
+//                settings.put(Environment.DIALECT, "org.hibernate.dialect.MySQLDialect");
+//                settings.put(Environment.POOL_SIZE, "1");
+//                settings.put(Environment.FORMAT_SQL, "true");
+//                settings.put(Environment.SHOW_SQL, "true");
+//
+//                registryBuilder.applySettings(settings);
+//                registry = registryBuilder.build();
                 MetadataSources sources = new MetadataSources(registry);
                 Metadata metadata = sources.getMetadataBuilder().build();
                 sessionFactory = metadata.getSessionFactoryBuilder().build();

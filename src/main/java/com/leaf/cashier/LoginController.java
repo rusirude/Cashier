@@ -1,5 +1,6 @@
 package com.leaf.cashier;
 
+import com.leaf.cashier.bl.UserBL;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
@@ -20,6 +21,7 @@ public class LoginController implements Initializable {
     @FXML
     private void btnLoginAction(ActionEvent event) throws Exception{
         ((Node)(event.getSource())).getScene().getWindow().hide();
+        UserBL.login("", "");
         Parent parent = FXMLLoader.load(getClass().getResource("/fxml/Home.fxml"));
         Stage stage = new Stage();
         Scene scene = new Scene(parent);
