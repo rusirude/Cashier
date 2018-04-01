@@ -5,9 +5,18 @@
  */
 package com.leaf.cashier;
 
+import com.leaf.cashier.bl.SysUserBL;
 import java.net.URL;
 import java.util.ResourceBundle;
+import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 
 /**
  * FXML Controller class
@@ -15,6 +24,19 @@ import javafx.fxml.Initializable;
  * @author Rusiru
  */
 public class HomeController implements Initializable {
+    
+    
+    
+    @FXML
+    private void btnSignOutAction(ActionEvent event) throws Exception{
+        ((Node)(event.getSource())).getScene().getWindow().hide();
+        Parent parent = FXMLLoader.load(getClass().getResource("/fxml/Login.fxml"));
+        Stage stage = new Stage();
+        Scene scene = new Scene(parent);
+        stage.initStyle(StageStyle.UNDECORATED);
+        stage.setScene(scene);
+        stage.show();
+    }
 
     /**
      * Initializes the controller class.

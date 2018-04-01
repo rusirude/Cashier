@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.shape.*?>
+<?import com.jfoenix.controls.*?>
 <?import javafx.scene.text.*?>
 <?import javafx.scene.image.*?>
 <?import javafx.scene.media.*?>
@@ -9,24 +12,64 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane id="AnchorPane" prefHeight="331.0" prefWidth="491.0" stylesheets="@../styles/Styles.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.leaf.cashier.LoginController">
+<AnchorPane id="AnchorPane" prefHeight="521.0" prefWidth="303.0" style="-fx-background-color: #FFFFFF;" stylesheets="@../styles/Styles.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.leaf.cashier.LoginController">
     <children>
         <Label fx:id="label" layoutX="126" layoutY="120" minHeight="16" minWidth="69" />
-        <PasswordField fx:id="txtPassword" layoutX="304.0" layoutY="203.0" prefHeight="25.0" prefWidth="173.0" />
-        <TextField fx:id="txtUsername" layoutX="304.0" layoutY="153.0" prefHeight="25.0" prefWidth="173.0" />
-        <Label layoutX="304.0" layoutY="133.0" prefHeight="17.0" prefWidth="80.0" text="Username" />
-        <Label layoutX="304.0" layoutY="186.0" text="Password" />
-        <Button fx:id="btnLogin" layoutX="303.0" layoutY="253.0" mnemonicParsing="false" onAction="#btnLoginAction" text="Login" />
-        <Button fx:id="btnCancel" layoutX="365.0" layoutY="253.0" mnemonicParsing="false" text="Cancel" />
-        <ImageView disable="true" fitHeight="157.0" fitWidth="250.0" layoutX="36.0" layoutY="113.0" pickOnBounds="true" preserveRatio="true">
-            <image>
-                <Image url="@../image/leafLogo.png" />
-            </image>
-        </ImageView>
-        <Label layoutX="302.0" layoutY="21.0" text="Login">
-            <font>
-                <Font size="67.0" />
-            </font>
-        </Label>
+      <JFXTextField fx:id="txtUsername" focusColor="#21e435" layoutX="51.0" layoutY="362.0" prefHeight="25.0" prefWidth="205.0" promptText="Username" unFocusColor="#21e435" />
+      <JFXPasswordField fx:id="txtPassword" focusColor="#21e435" layoutX="51.0" layoutY="428.0" prefHeight="25.0" prefWidth="205.0" promptText="Password" unFocusColor="#21e435" />
+      <JFXButton fx:id="btnSignIn" buttonType="RAISED" layoutX="51.0" layoutY="465.0" onAction="#btnSignInAction" prefHeight="36.0" prefWidth="69.0" style="-fx-background-color: #21e435; -fx-background-radius: 20;" text="Sign In" textFill="#fcfcfc">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="btnExit" buttonType="RAISED" layoutX="161.0" layoutY="465.0" onAction="#btnExitAction" prefHeight="36.0" prefWidth="69.0" style="-fx-background-color: #21e435; -fx-background-radius: 20;" text="Exit" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </JFXButton>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="363.0" strokeType="INSIDE" width="303.0">
+         <fill>
+            <LinearGradient endX="0.09523809523809523" endY="1.0" startX="1.0">
+               <stops>
+                  <Stop color="#21e435" />
+                  <Stop color="#21e435" offset="0.6130268199233716" />
+                  <Stop color="WHITE" offset="0.6168582375478927" />
+                  <Stop color="WHITE" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </fill>
+         <stroke>
+            <LinearGradient endX="0.09523809523809523" endY="1.0" startX="1.0">
+               <stops>
+                  <Stop color="#21e435" />
+                  <Stop color="#21e435" offset="0.6130268199233716" />
+                  <Stop color="WHITE" offset="0.6168582375478927" />
+                  <Stop color="WHITE" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </stroke>
+      </Rectangle>
+      <Circle fill="WHITE" layoutX="154.0" layoutY="98.0" radius="62.0" stroke="WHITE" strokeType="INSIDE" />
+      <Circle fill="WHITE" layoutX="154.0" layoutY="98.0" radius="53.0" stroke="#21e435" strokeType="INSIDE" strokeWidth="5.0" />
+      <ImageView fitHeight="79.0" fitWidth="77.0" layoutX="118.0" layoutY="58.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/profile_icon.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="14.0" layoutY="423.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/password_icon.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="14.0" layoutY="362.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/user_icon.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="27.0" layoutY="268.0" text="Sign In" textFill="#22e035">
+         <font>
+            <Font name="System Bold Italic" size="50.0" />
+         </font>
+      </Label>
     </children>
 </AnchorPane>

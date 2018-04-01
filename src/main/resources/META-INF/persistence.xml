@@ -4,6 +4,8 @@
     <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
     <class>com.leaf.cashier.persistance.entity.User</class>
     <class>com.leaf.cashier.persistance.entity.UserRole</class>
+    <class>com.leaf.cashier.persistance.entity.Status</class>
+    <class>com.leaf.cashier.persistance.entity.UserUserRoleMap</class>
     <properties>
       <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/cashier?zeroDateTimeBehavior=convertToNull"/>
       <property name="javax.persistence.jdbc.user" value="root"/>

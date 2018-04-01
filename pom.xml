@@ -18,6 +18,8 @@
         <hibernate-validation.version>5.4.0.Final</hibernate-validation.version>
         <jackson.version>2.7.1</jackson.version>
         <mysql.version>5.1.38</mysql.version>
+        <jfoenix.version>1.6.0</jfoenix.version>
+        <fontawesomefx.version>8.9</fontawesomefx.version>
     </properties>
     
     <dependencies>
@@ -53,6 +55,11 @@
             <artifactId>hibernate-validator</artifactId>
             <version>${hibernate-validation.version}</version>
         </dependency>
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-jpamodelgen</artifactId>
+            <version>${hibernate.version}</version>
+        </dependency>
         
         <!-- Need this for json to/from object -->
         <dependency>
@@ -70,6 +77,18 @@
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
             <version>${mysql.version}</version>
+        </dependency>
+        
+        <dependency>
+            <groupId>com.jfoenix</groupId>
+            <artifactId>jfoenix</artifactId>
+            <version>${jfoenix.version}</version>
+        </dependency>
+        
+        <dependency>
+            <groupId>de.jensd</groupId>
+            <artifactId>fontawesomefx</artifactId>
+            <version>${fontawesomefx.version}</version>
         </dependency>
         
     </dependencies>
