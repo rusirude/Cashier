@@ -1,0 +1,7 @@
+.dashboard_button{
+    -fx-background-color: #FFFFFF
+}
+
+.dashboard_button:hover{
+    -fx-border-color:  #21e435
+}

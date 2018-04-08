@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="1300.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.leaf.cashier.DashboardController">
+   <children>
+      <VBox prefHeight="650.0" prefWidth="50.0" style="-fx-background-color: #21e435;">
+         <children>
+            <ImageView fitHeight="81.0" fitWidth="41.0" onMousePressed="#btnSignOutAction" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/sign_out.png" />
+               </image>
+            </ImageView>
+         </children>
+      </VBox>
+      <Pane prefHeight="650.0" prefWidth="1250.0" style="-fx-background-color: #FFFFFF;">
+         <children>
+            <JFXButton alignment="BASELINE_CENTER" contentDisplay="TOP" layoutX="43.0" layoutY="28.0" styleClass="dashboard_button" stylesheets="@../styles/dashboard.css" text="User Management" textAlignment="CENTER">
+               <graphic>
+                  <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/user_mgt.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </JFXButton>
+            <JFXButton alignment="BASELINE_CENTER" contentDisplay="TOP" layoutX="243.0" layoutY="28.0" styleClass="dashboard_button" stylesheets="@../styles/dashboard.css" text="User Management" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/user_mgt.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton alignment="BASELINE_CENTER" contentDisplay="TOP" layoutX="243.0" layoutY="325.0" styleClass="dashboard_button" stylesheets="@../styles/dashboard.css" text="User Management" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/user_mgt.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton alignment="BASELINE_CENTER" contentDisplay="TOP" layoutX="43.0" layoutY="325.0" styleClass="dashboard_button" stylesheets="@../styles/dashboard.css" text="User Management" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/user_mgt.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton alignment="BASELINE_CENTER" contentDisplay="TOP" layoutX="466.0" layoutY="325.0" styleClass="dashboard_button" stylesheets="@../styles/dashboard.css" text="User Management" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/user_mgt.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton alignment="BASELINE_CENTER" contentDisplay="TOP" layoutX="685.0" layoutY="325.0" styleClass="dashboard_button" stylesheets="@../styles/dashboard.css" text="User Management" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/user_mgt.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton alignment="BASELINE_CENTER" contentDisplay="TOP" layoutX="685.0" layoutY="28.0" styleClass="dashboard_button" stylesheets="@../styles/dashboard.css" text="User Management" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/user_mgt.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton alignment="BASELINE_CENTER" contentDisplay="TOP" layoutX="455.0" layoutY="28.0" styleClass="dashboard_button" stylesheets="@../styles/dashboard.css" text="User Management" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/user_mgt.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+         </children></Pane>
+   </children>
+</HBox>

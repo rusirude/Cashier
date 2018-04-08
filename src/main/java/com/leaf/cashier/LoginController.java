@@ -27,11 +27,11 @@ public class LoginController implements Initializable {
     private JFXPasswordField txtPassword;
     
     @FXML
-    private void btnSignInAction(ActionEvent event) throws Exception{
-        ((Node)(event.getSource())).getScene().getWindow().hide();
+    private void btnSignInAction(ActionEvent event) throws Exception{        
         ResponseDTO responseDTO = SysUserBL.login(txtUsername.getText(), txtPassword.getText());
         if(ResponseCodeEnum.SUCCESS.getCode().equals(responseDTO.getCode())){
-            Parent parent = FXMLLoader.load(getClass().getResource("/fxml/Home.fxml"));
+            ((Node)(event.getSource())).getScene().getWindow().hide();
+            Parent parent = FXMLLoader.load(getClass().getResource("/fxml/Dashboard.fxml"));
             Stage stage = new Stage();
             Scene scene = new Scene(parent);
             stage.initStyle(StageStyle.UNDECORATED);

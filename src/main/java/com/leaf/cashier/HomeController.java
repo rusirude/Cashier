@@ -27,16 +27,7 @@ public class HomeController implements Initializable {
     
     
     
-    @FXML
-    private void btnSignOutAction(ActionEvent event) throws Exception{
-        ((Node)(event.getSource())).getScene().getWindow().hide();
-        Parent parent = FXMLLoader.load(getClass().getResource("/fxml/Login.fxml"));
-        Stage stage = new Stage();
-        Scene scene = new Scene(parent);
-        stage.initStyle(StageStyle.UNDECORATED);
-        stage.setScene(scene);
-        stage.show();
-    }
+    
 
     /**
      * Initializes the controller class.
